@@ -61,7 +61,7 @@ textarea::placeholder {
 	position: absolute;
 	top: 30px;
 	left: calc(-100% - 25px);
-	background-color: #e5936f;
+	background-color: #eb595f;
 }
 .center-title {
 	font-size: 42px;
@@ -74,7 +74,7 @@ textarea::placeholder {
 	content: '';
 	height: 1px;
 	width: 70px;
-	background-color: #e5936f;
+	background-color: #eb595f;
 	display: block;
 	margin: 15px auto 0 auto;
 }
@@ -94,7 +94,7 @@ textarea::placeholder {
 }
 
 .def-btn {
-	background-color: #e5936f;
+	background-color: #eb595f;
 	padding: 15px 45px;
 	display: inline-block;
 	transition: background-color 0.35s ease;
@@ -107,8 +107,8 @@ textarea::placeholder {
 
 /* Header START */
 .header-top {
-	background-color: #233545;
-	color: #fff;
+	background-color: #0f1e2e;
+	color: #ffeee9;
 	padding: 18px 0 55px 0;
 	font-size: 14px;
 }
@@ -155,13 +155,13 @@ textarea::placeholder {
 }
 .header-bottom-row {
 	display: flex;
-	background-color: #e5936f;
+	background-color: #eb595f;
 	color: #fff;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.11);
 }
 .header-logo {
 	background-color: #fff;
-	padding: 15px 60px 15px 40px;
+	padding: 0px 60px 0px 40px;
 	display: flex;
 	align-items: center;
 	clip-path: polygon(0px 0px, 100% 0%, 82.68% 101.20%, 0px 100%);
@@ -170,7 +170,8 @@ textarea::placeholder {
 	display: flex;
 }
 .header-logo img {
-	max-width: 160px;
+	/* height: 70px; */
+	max-width: 200px;
 }
 .header-nav {
 	padding: 10px 60px;
@@ -195,13 +196,13 @@ textarea::placeholder {
 	transition: 0.35s ease;
 }
 .header-bottom.is-fixed .header-logo {
-	padding: 0 50px 5px 40px;
+	padding: 0 50px 0px 40px;
 }
 .header-bottom.is-fixed .header-nav {
     padding: 0 60px;
 }
 .header-bottom.is-fixed .header-logo img {
-	max-width: 140px;
+	max-width: 180px;
 }
 
 .go-up {
@@ -220,7 +221,7 @@ textarea::placeholder {
 	transform: none;
 }
 .go-up a {
-	background-color: #e5936f;
+	background-color: #eb595f;
 	width: 60px;
 	height: 60px;
 	display: flex;
@@ -337,7 +338,7 @@ textarea::placeholder {
 	opacity: 1;
 }
 .swiper-pagination-bullet-active {
-	background-color: #e5936f;
+	background-color: #eb595f;
 }
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -373,7 +374,7 @@ textarea::placeholder {
 
 /* Numbers START */
 .s-numbers {
-	background-color: #233545;
+	background-color: #0f1e2e;
 	color: #fff;
 	padding: 72px 0;
 }
@@ -476,7 +477,7 @@ textarea::placeholder {
 	display: block;
 	height: 1px;
 	width: 70px;
-	background-color: #e5936f;
+	background-color: #eb595f;
 	margin: 20px auto 0 auto;
 }
 .modal-form input {
@@ -491,7 +492,7 @@ textarea::placeholder {
 	margin-bottom: 24px;
 }
 .modal-form .form-button {
-	background-color: #e5936f;
+	background-color: #eb595f;
 	color: #fff;
 	max-width: 285px;
 	width: 100%;
@@ -994,7 +995,7 @@ textarea::placeholder {
 	content: '';
 	width: 100%;
 	height: 10px;
-	background-color: #e5936f;
+	background-color: #eb595f;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -1121,7 +1122,7 @@ textarea::placeholder {
 		padding: 15px 50px 15px 20px;
 	}
 	.header-nav {
-		padding: 10px 20px;
+		padding: 20px 20px;
 	}
 	/* Header 1200 END */
 
@@ -1380,14 +1381,14 @@ textarea::placeholder {
 	}
 	.header-mobile-logo {
 		background-color: #fff;
-		padding: 8px 40px 8px 20px;
+		padding: 0px 40px 0px 20px;
 		display: flex;
 		align-items: center;
 		clip-path: polygon(0px 0px, 100% 0%, 82.68% 101.20%, 0px 100%);
 		margin-left: -20px;
 	}
 	.header-mobile-logo img {
-		max-width: 110px;
+		max-width: 136px;
 	}
 
 	.hamburger {
@@ -1424,7 +1425,7 @@ textarea::placeholder {
 	}
 
 	.header-mobile-wrap {
-		background-color: #233545;
+		background-color: #0f1e2e;
 		color: #fff;
 		padding: 30px 20px;
 		text-align: center;
@@ -1586,7 +1587,7 @@ textarea::placeholder {
 		content: '';
 		height: 1px;
 		width: 50px;
-		background-color: #e5936f;
+		background-color: #eb595f;
 		display: block;
 		margin: 20px auto 0 auto;
 	}
@@ -1627,7 +1628,7 @@ textarea::placeholder {
 		justify-content: center;
 	}
 	.services-item {
-		width: 250px;
+		width: 400px;
 	}
 	/* Services 575 END */
 
