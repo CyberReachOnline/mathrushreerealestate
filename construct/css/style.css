@@ -92,7 +92,19 @@ textarea::placeholder {
 .def-desc strong {
 	color: #000;
 }
-
+.red-btn{
+	background-color: #eb595f;
+	padding: 15px 45px;
+	display: inline-block;
+	transition: background-color 0.35s ease;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	margin-top: 44px;
+}
+.red-btn:hover{
+	background-color: #BB2440;
+}
 .def-btn {
 	background-color: #eb595f;
 	padding: 15px 45px;
@@ -174,7 +186,7 @@ textarea::placeholder {
 	max-width: 200px;
 }
 .header-nav {
-	padding: 10px 60px;
+	padding: 25px 60px !important;
 	margin-left: auto;
 }
 .header-nav ul {
@@ -1279,6 +1291,10 @@ textarea::placeholder {
 	.gallery-wrap {
 		grid-gap: 20px;
 	}
+	.red-btn {
+        padding: 12px 40px;
+        font-size: 14px;
+    }
 	/* Gallery 992 END */
 
 	/* Why us 992 START */
@@ -1640,6 +1656,9 @@ textarea::placeholder {
 		grid-gap: 15px;
 	}
 	.gallery-btn {
+		margin-top: 30px;
+	}
+	.red-btn {
 		margin-top: 30px;
 	}
 	/* Gallery 575 END */
