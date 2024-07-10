@@ -18,7 +18,7 @@
 
 <body>
 	<div class="whatsapp-btn-container">
-		<a class="whatsapp-btn" href="https://wa.me/91999999999"><i class="fab fa-whatsapp"></i></a>
+		<a class="whatsapp-btn" href="https://wa.me/+917975804459 "><i class="fab fa-whatsapp"></i></a>
 		<span>Contact Us</span>
 	</div>
 
@@ -376,7 +376,9 @@
 					<img src="images/gallery-12.jpg" alt="Image 12">
 				</a>
 			</div>
-			<a href="gallery.html" class="red-btn" >Show more</a>
+			<center>
+				<a href="gallery.html" class="red-btn" >Show more</a>
+			</center>
 			
 		</div>
 	</section>
@@ -617,12 +619,12 @@
 				</div>
 
 				<div class="form-right">
-					<form>
-						<input type="text" placeholder="Your name*" required>
-						<input type="text" placeholder="Your phone*" required>
-						<input type="text" placeholder="Your email">
-						<textarea cols="30" rows="5" placeholder="Comment"></textarea>
-						<button class="def-btn form-button">Send</button>
+					<form onsubmit="sendWhatsAppMessage()">
+						<input type="text" id="name" name="name" placeholder="Your name*" required>
+						<input type="number" id="phone" name="phone" placeholder="Your phone*" required>
+						<input type="email" id="email" name="email" placeholder="Your email">
+						<textarea id="message" name="message" placeholder="Comment"></textarea>
+						<button class="def-btn form-button" type="submit">Send</button>
 					</form>
 				</div>
 
@@ -643,7 +645,7 @@
 						</a>
 					</div>
 					<div class="footer-desc">
-						<strong>Construction</strong> is a full service building design company.
+						<strong>Mathrushree Architect</strong> is a full house building design company.
 					</div>
 				</div>
 
@@ -675,14 +677,14 @@
 						<h5 class="footer-title">Contacts</h5>
 						<div class="footer-info-item">
 							<div class="footer-info-icon"><img src="images/location-gray.svg" alt="Location"></div>
-							<div class="footer-info-text">Greenbe street 5B, Latvia</div>
+							<div class="footer-info-text">kodagi thrumalapura, hesaraghatta main road</div>
 						</div>
-						<a href="tel:79504575654" class="footer-info-item">
+						<a href="tel:+917975804459" class="footer-info-item">
 							<div class="footer-info-icon"><img src="images/phone-gray.svg" alt="Phone"></div>
-							<div class="footer-info-text">+7 950 457 5654</div>
+							<div class="footer-info-text">+917975804459 | +9198445513275</div>
 						</a>
 
-						<div class="footer-social">
+						<!-- <div class="footer-social">
 							<a href="#">
 								<img src="images/social-twitter-gray.svg" alt="Twitter">
 							</a>
@@ -695,14 +697,14 @@
 							<a href="#">
 								<img src="images/social-telegram-gray.svg" alt="Telegram">
 							</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
 			</div>
 			
 			<div class="footer-copyright">
-				<div class="copyright-text">Copyright © 2023 Construction. All rights reserved</div>
+				<div class="copyright-text">Copyright © 2024 Mathrushree. All rights reserved</div>
 			</div>
 
 		</div>
@@ -714,6 +716,24 @@
 	<script src="js/magnific-popup.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+		function sendWhatsAppMessage() {
+			event.preventDefault();
+	
+			var name = document.getElementById('name').value;
+			var phone = document.getElementById('phone').value;
+			var email = document.getElementById('email').value;
+			var message = document.getElementById('message').value;
+			var whatsappNumber = '+917975804459'; // Replace with the actual WhatsApp number
+	
+			var whatsappUrl = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent('Name: ' + name + '\nPhone: ' + phone +  '\nEmail: ' + email + '\nMessage: ' + message);
+	
+			// window.open(whatsappUrl, '_blank');
+			window.open(whatsappUrl).focus();
+		}
+	
+		document.getElementById('whatsappForm').addEventListener('submit', sendWhatsAppMessage);
+	</script>
 </body>
 
 </html>
