@@ -35,10 +35,10 @@
 
 		<div class="modal-form-body">
 			<div class="modal-form-title">Request a call</div>
-			<form>
-				<input type="text" placeholder="Your name*" required>
-				<input type="text" placeholder="Your phone*" required>
-				<button class="form-button">Send</button>
+			<form id="request-call-form">
+				<input type="text" id="name1" name="name" placeholder="Your name*" required>
+				<input type="number" id="phone1" name="phone" placeholder="Your phone*" required>
+				<button type="submit" class="form-button">Send</button>
 			</form>
 		</div>
 
@@ -287,7 +287,7 @@
 						<div class="services-desc">
 							Our experts will create drawings and plans for your project, with precision and accuracy.We also offer map services to help you visualize your project.
 						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Order service</a>
+						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Request a call</a>
 					</div>
 				</div>
 
@@ -300,7 +300,7 @@
 						<div class="services-desc">
 							Our experienced professionals will supervise your construction project from start to finish, ensuring timely completion and quality workmanship
 						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Order service</a>
+						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Request a call</a>
 					</div>
 				</div>
 
@@ -313,7 +313,7 @@
 						<div class="services-desc">
 							Our team provides a wide range of civil engineering services, including construction, renovation, and maintenance.
 						</div>
-						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Order service</a>
+						<a href="#modal-form" data-effect="mfp-zoom-in" class="def-btn services-btn">Request a call</a>
 					</div>
 				</div>
 
@@ -619,7 +619,8 @@
 				</div>
 
 				<div class="form-right">
-					<form onsubmit="sendWhatsAppMessage()">
+					<form action="https://api.web3forms.com/submit" method="POST" onsubmit="sendWhatsAppMessage()">
+						<input type="hidden" name="access_key" value="213ade23-1eb7-48a3-a313-5a316b226881">
 						<input type="text" id="name" name="name" placeholder="Your name*" required>
 						<input type="number" id="phone" name="phone" placeholder="Your phone*" required>
 						<input type="email" id="email" name="email" placeholder="Your email">
@@ -718,7 +719,7 @@
 	<script src="js/script.js"></script>
 	<script>
 		function sendWhatsAppMessage() {
-			event.preventDefault();
+			// event.preventDefault();
 	
 			var name = document.getElementById('name').value;
 			var phone = document.getElementById('phone').value;
@@ -734,6 +735,26 @@
 	
 		document.getElementById('whatsappForm').addEventListener('submit', sendWhatsAppMessage);
 	</script>
+	<script>
+		document.getElementById('request-call-form').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent the default form submission
+		
+			const name = document.getElementById('name1').value;
+			const phone = document.getElementById('phone1').value;
+		
+			// Format the WhatsApp message
+			const message = `Hello, I would like to request a call regarding your services. My name is ${name} and my phone number is ${phone}.`;
+		
+			// Encode the message to be URL safe
+			const encodedMessage = encodeURIComponent(message);
+		
+			// Create the WhatsApp URL
+			const whatsappUrl = `https://wa.me/+917975804459?text=${encodedMessage}`;
+		
+			// Redirect to the WhatsApp URL
+			window.open(whatsappUrl, '_blank');
+		});
+		</script>
 </body>
 
 </html>
