@@ -4,202 +4,187 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.png">
-	<link rel="stylesheet" href="fonts/stylesheet.css">
-	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.min.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Gallery</title>
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+        }
+        .gallery-section {
+            flex: 1 1 300px; /* Adjusts width based on available space */
+            max-width: 300px; /* Maximum width of each section */
+            margin: 10px;
+            text-align: center;
+        }
+        .gallery-section h3 {
+            margin-bottom: 10px;
+        }
+        .gallery-section img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        @media (hover: hover) {
+            .gallery-section img:hover {
+                transform: scale(1.05);
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery-section {
+                flex: 1 1 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery-section {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-	<div class="whatsapp-btn-container">
-		<a class="whatsapp-btn" href="https://wa.me/91999999999"><i class="fab fa-whatsapp"></i></a>
-		<span>Contact Us</span>
-	</div>
-	<div class="go-up">
-		<a href="#">
-			<img src="images/arrow-up.svg" alt="Go up">
-		</a>
-	</div>
-	<header class="site-header">
-
-		<div class="header-top">
-			<div class="container">
-				<div class="header-row">
-
-					<!-- Header top mobile START -->
-					<div class="header-mobile-logo">
-						<a href="index.html">
-							<img src="images/LOGO.png" alt="Construction">
-							<!-- <a href="index.html"><h2 style="color: black; margin-bottom: 0;">MATHRU<span style="color: orange;">SHREE</span></h2></a> -->
-						</a>
-					</div>
-
-					<div class="hamburger">
-						<span></span>
-						<span></span>
-					</div>
-					<!-- Header top mobile END -->
-
-					<div class="header-desc">Construction work of all kinds</div>
-					<div class="header-right">
-						<div class="header-info">
-							<img src="images/location.svg" alt="ул. Гагарина 5Б г. Сочи">
-							<span>Greenbe street 5B, Latvia</span>
-						</div>
-						<a href="tel:79504575654" class="header-info">
-							<img src="images/phone.svg" alt="+7 950 457 5654">
-							<span>+7 950 457 5654</span>
-						</a>
-
-						<div class="header-social">
-							<a href="#">
-								<img src="images/social-twitter.svg" alt="Twitter">
-							</a>
-							<a href="#">
-								<img src="images/social-vk.svg" alt="Вконтакте">
-							</a>
-							<a href="#">
-								<img src="images/social-facebook.svg" alt="Facebook">
-							</a>
-							<a href="#">
-								<img src="images/social-telegram.svg" alt="Telegram">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="header-bottom">
-			<div class="container">
-				<div class="header-bottom-row">
-					<div class="header-logo">
-						<a href="index.html">
-							<img src="images/LOGO.png" alt="Construction">
-							<!-- <a href="index.html"><h2 style="color: black; margin-bottom: 0;">MATHRU<span style="color: #ff2121;">SHREE</span></h2></a> -->
-						</a>
-					</div>
-
-					<nav class="header-nav">
-						<ul>
-							<li><a class="anchor-link" href="index.html#s-about">About us</a></li>
-							<li><a class="anchor-link" href="index.html#s-services">Services</a></li>
-							<li><a class="anchor-link" href="index.html#s-gallery">Gallery</a></li>
-							<li><a class="anchor-link" href="projects.html">Projects</a></li>
-							<li><a class="anchor-link" href="index.html#s-testimonials">Testimonials</a></li>
-							<li><a class="anchor-link" href="index.html#s-contact">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-
-
-		<!-- Header mobile START -->
-		<div class="header-mobile-wrap">
-			<nav class="header-mobile-nav">
-				<ul>
-					<li><a class="anchor-link" href="index.html#s-about">About us</a></li>
-					<li><a class="anchor-link" href="index.html#s-services">Services</a></li>
-					<li><a class="anchor-link" href="index.html#s-gallery">Gallery</a></li>
-					<li><a class="anchor-link" href="projects.html">Projects</a></li>
-					<li><a class="anchor-link" href="index.html#s-testimonials">Testimonials</a></li>
-					<li><a class="anchor-link" href="index.html#s-contact">Contact</a></li>
-				</ul>
-			</nav>
-
-			<div class="header-mobile-info">
-				<img src="images/location.svg" alt="ул. Гагарина 5Б г. Сочи">
-				<span>Greenbe street 5B, Latvia</span>
-			</div>
-			<a href="tel:79504575654" class="header-mobile-info">
-				<img src="images/phone.svg" alt="+7 950 457 5654">
-				<span>+7 950 457 5654</span>
-			</a>
-
-			<div class="header-mobile-social">
-				<a href="#">
-					<img src="images/social-twitter.svg" alt="Twitter">
-				</a>
-				<a href="#">
-					<img src="images/social-vk.svg" alt="Вконтакте">
-				</a>
-				<a href="#">
-					<img src="images/social-facebook.svg" alt="Facebook">
-				</a>
-				<a href="#">
-					<img src="images/social-telegram.svg" alt="Telegram">
-				</a>
-			</div>
-		</div>
-		<!-- Header mobile END -->
-
-	</header>
+    <div class="whatsapp-btn-container">
+        <a class="whatsapp-btn" href="https://wa.me/+917975804459"><i class="fab fa-whatsapp"></i></a>
+        <span>Contact Us</span>
+    </div>
+    <div class="go-up">
+        <a href="#">
+            <img src="images/arrow-up.svg" alt="Go up">
+        </a>
+    </div>
+    <header class="site-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-row">
+                    <div class="header-mobile-logo">
+                        <a href="index.html">
+                            <img src="images/LOGO.png" alt="Construction">
+                        </a>
+                    </div>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="header-desc">Construction work of all kinds</div>
+                    <div class="header-right">
+                        <div class="header-info">
+                            <img src="images/location.svg" alt="Location">
+                            <span>kodagi thrumalapura, hesaraghatta main road</span>
+                        </div>
+                        <a href="tel:79504575654" class="header-info">
+                            <img src="images/phone.svg" alt="Phone">
+                            <span>+917975804459</span>
+                        </a>
+                        <div class="header-social">
+                            <a href="#">
+                                <img src="images/social-twitter.svg" alt="Twitter">
+                            </a>
+                            <a href="#">
+                                <img src="images/social-vk.svg" alt="Вконтакте">
+                            </a>
+                            <a href="#">
+                                <img src="images/social-facebook.svg" alt="Facebook">
+                            </a>
+                            <a href="#">
+                                <img src="images/social-telegram.svg" alt="Telegram">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="container">
+                <div class="header-bottom-row">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <img src="images/LOGO.png" alt="Construction">
+                        </a>
+                    </div>
+                    <nav class="header-nav">
+                        <ul>
+                            <li><a class="anchor-link" href="index.html#s-about">About us</a></li>
+                            <li><a class="anchor-link" href="index.html#s-services">Services</a></li>
+                            <li><a class="anchor-link" href="index.html#s-gallery">Gallery</a></li>
+                            <li><a class="anchor-link" href="projects.html">Projects</a></li>
+                            <li><a class="anchor-link" href="index.html#s-testimonials">Testimonials</a></li>
+                            <li><a class="anchor-link" href="index.html#s-contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header-mobile-wrap">
+            <nav class="header-mobile-nav">
+                <ul>
+                    <li><a class="anchor-link" href="index.html#s-about">About us</a></li>
+                    <li><a class="anchor-link" href="index.html#s-services">Services</a></li>
+                    <li><a class="anchor-link" href="index.html#s-gallery">Gallery</a></li>
+                    <li><a class="anchor-link" href="projects.html">Projects</a></li>
+                    <li><a class="anchor-link" href="index.html#s-testimonials">Testimonials</a></li>
+                    <li><a class="anchor-link" href="index.html#s-contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-mobile-info">
+                <img src="images/location.svg" alt="Location">
+                <span>kodagi thrumalapura, hesaraghatta main road</span>
+            </div>
+            <a href="tel:79504575654" class="header-mobile-info">
+                <img src="images/phone.svg" alt="Phone">
+                <span>+917975804459</span>
+            </a>
+            <div class="header-mobile-social">
+                <a href="#">
+                    <img src="images/social-twitter.svg" alt="Twitter">
+                </a>
+                <a href="#">
+                    <img src="images/social-vk.svg" alt="Вконтакте">
+                </a>
+                <a href="#">
+                    <img src="images/social-facebook.svg" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="images/social-telegram.svg" alt="Telegram">
+                </a>
+            </div>
+        </div>
+    </header>
     <section class="s-gallery" id="s-gallery">
-		<div class="container">
-			<h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Photo gallery</h2>
-
-			<div class="gallery-wrap">
-				<a href="images/gallery-1.jpg" class="gallery-item wow fadeIn" data-effect="mfp-zoom-in" data-wow-delay="0.2s">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-1.jpg" alt="Image 1">
-				</a>
-				<a href="images/gallery-2.jpg" class="gallery-item wow fadeIn" data-effect="mfp-zoom-in" data-wow-delay="0.3s">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-2.jpg" alt="Image 2">
-				</a>
-				<a href="images/gallery-3.jpg" class="gallery-item wow fadeIn" data-effect="mfp-zoom-in" data-wow-delay="0.4s"> 
-					<span class="gallery-border"></span>
-					<img src="images/gallery-3.jpg" alt="Image 3">
-				</a>
-				<a href="images/gallery-4.jpg" class="gallery-item wow fadeIn" data-effect="mfp-zoom-in" data-wow-delay="0.5s">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-4.jpg" alt="Image 4">
-				</a>
-				<a href="images/gallery-5.jpg" class="gallery-item wow fadeIn" data-effect="mfp-zoom-in" data-wow-delay="0.6s">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-5.jpg" alt="Image 5">
-				</a>
-				<a href="images/gallery-6.jpg" class="gallery-item wow fadeIn" data-effect="mfp-zoom-in" data-wow-delay="0.7s">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-6.jpg" alt="Image 6">
-				</a>
-
-				<a href="images/gallery-7.jpg" class="gallery-item" data-effect="mfp-zoom-in">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-7.jpg" alt="Image 7">
-				</a>
-				<a href="images/gallery-8.jpg" class="gallery-item" data-effect="mfp-zoom-in">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-8.jpg" alt="Image 8">
-				</a>
-				<a href="images/gallery-9.jpg" class="gallery-item" data-effect="mfp-zoom-in"> 
-					<span class="gallery-border"></span>
-					<img src="images/gallery-9.jpg" alt="Image 9">
-				</a>
-				<a href="images/gallery-10.jpg" class="gallery-item" data-effect="mfp-zoom-in">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-10.jpg" alt="Image 10">
-				</a>
-				<a href="images/gallery-11.jpg" class="gallery-item" data-effect="mfp-zoom-in">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-11.jpg" alt="Image 11">
-				</a>
-				<a href="images/gallery-12.jpg" class="gallery-item" data-effect="mfp-zoom-in">
-					<span class="gallery-border"></span>
-					<img src="images/gallery-12.jpg" alt="Image 12">
-				</a>
-			</div>
-
-			<div class="gallery-btn">
-				<a href="gallery.html" class="def-btn wow fadeInUp" data-wow-delay="0.2s">Show more</a>
-			</div>
-			
-		</div>
-	</section>
-	<footer class="site-footer">
+        <div class="container">
+            <h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-section">
+                    <h3>Design</h3>
+                    <a href="design.html">
+                        <img src="images/gallery-1.jpg" alt="Design">
+                    </a>
+                </div>
+                <div class="gallery-section">
+                    <h3>Interior</h3>
+                    <a href="interior.html">
+                        <img src="images/gallery-1.jpg" alt="Interior">
+                    </a>
+                </div>
+                <div class="gallery-section">
+                    <h3>Work</h3>
+                    <a href="work.html">
+                        <img src="images/gallery-1.jpg" alt="Work">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="site-footer">
 		<div class="container">
 
 			<div class="footer-row">
@@ -211,7 +196,7 @@
 						</a>
 					</div>
 					<div class="footer-desc">
-						<strong>Construction</strong> is a full service building design company.
+						<strong>Mathrushree Architect</strong> is a full house building design company.
 					</div>
 				</div>
 
@@ -219,9 +204,10 @@
 					<nav class="footer-nav">
 						<h5 class="footer-title">Our services</h5>
 						<ul>
-							<li><a href="#">Construction of houses</a></li>
-							<li><a href="#">Home repair</a></li>
-							<li><a href="#">Building design</a></li>
+							<li><a href="#">2D/3D/Structural Drawings</a></li>
+							<li><a href="#">Building Supervision</a></li>
+							<li><a href="#">Map Services</a></li>
+							<li><a href="#">Building Services</a></li>
 						</ul>
 					</nav>
 
@@ -242,14 +228,14 @@
 						<h5 class="footer-title">Contacts</h5>
 						<div class="footer-info-item">
 							<div class="footer-info-icon"><img src="images/location-gray.svg" alt="Location"></div>
-							<div class="footer-info-text">Greenbe street 5B, Latvia</div>
+							<div class="footer-info-text">kodagi thrumalapura, hesaraghatta main road</div>
 						</div>
-						<a href="tel:79504575654" class="footer-info-item">
+						<a href="tel:+917975804459" class="footer-info-item">
 							<div class="footer-info-icon"><img src="images/phone-gray.svg" alt="Phone"></div>
-							<div class="footer-info-text">+7 950 457 5654</div>
+							<div class="footer-info-text">+917975804459 | +9198445513275</div>
 						</a>
 
-						<div class="footer-social">
+						<!-- <div class="footer-social">
 							<a href="#">
 								<img src="images/social-twitter-gray.svg" alt="Twitter">
 							</a>
@@ -262,22 +248,35 @@
 							<a href="#">
 								<img src="images/social-telegram-gray.svg" alt="Telegram">
 							</a>
-						</div>
+						</div> -->
 					</div>
 				</div>
 
 			</div>
 			
 			<div class="footer-copyright">
-				<div class="copyright-text">Copyright © 2023 Construction. All rights reserved</div>
+				<div class="copyright-text">Copyright © 2024 Mathrushree. All rights reserved</div>
 			</div>
 
 		</div>
 	</footer>
-    <script src="js/jquery-3.7.0.min.js"></script>
-	<script src="js/swiper-bundle.min.js"></script>
-	<script src="js/magnific-popup.min.js"></script>
-	<script src="js/wow.min.js"></script>
-	<script src="js/script.js"></script>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+        $(document).ready(function() {
+            new WOW().init();
+            $('.popup-link').magnificPopup({
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+        });
+    </script>
 </body>
 </html>

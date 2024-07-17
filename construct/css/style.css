@@ -789,9 +789,9 @@ textarea::placeholder {
 	position: relative;
 	overflow: hidden;
 }
-.gallery-item:nth-child(n+7) {
+/* .gallery-item:nth-child(n+7) {
 	display: none;
-}
+} */
 .gallery-wrap a.gallery-visible {
 	display: block;
 }
