@@ -31,48 +31,96 @@
             integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
             crossorigin="anonymous"
             referrerpolicy="no-referrer"/>
-
+            <style>
+                .main{
+                    font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+                }
+                .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px; /* Increased max-width for larger screens */
+        }
+        
+        .form-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .form-input, .form-select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .submit-button {
+            background-color: #25D366; /* WhatsApp green */
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+        .submit-button:hover {
+            background-color: #1DA851; /* Darker green on hover */
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 15px;
+                width: 90%;
+            }
+        
+            .form-title {
+                font-size: 20px;
+            }
+        
+            .form-input, .form-select {
+                width: calc(100% - 18px); /* Adjust width for smaller screens */
+            }
+        
+            .submit-button {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .form-title {
+                font-size: 18px;
+            }
+        
+            .form-input, .form-select {
+                width: calc(100% - 16px); /* Adjust width for very small screens */
+            }
+        
+            .submit-button {
+                font-size: 12px; /* Further adjust font size for very small screens */
+            }
+        }
+            </style>
+        
         <title>Gallery</title>
-        <style>
-            .gallery-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                margin: 50px 0;
-            }
-            .gallery-section {
-                flex: 1 1 300px; /* Adjusts width based on available space */
-                max-width: 300px; /* Maximum width of each section */
-                margin: 10px;
-                text-align: center;
-            }
-            .gallery-section h3 {
-                margin-bottom: 10px;
-            }
-            .gallery-section img {
-                width: 100%;
-                height: auto;
-                object-fit: cover;
-                cursor: pointer;
-                transition: transform 0.3s;
-            }
-            @media (hover: hover) {
-                .gallery-section img:hover {
-                    transform: scale(1.05);
-                }
-            }
-            @media (max-width: 768px) {
-                .gallery-section {
-                    flex: 1 1 45%;
-                }
-            }
-            @media (max-width: 480px) {
-                .gallery-section {
-                    flex: 1 1 100%;
-                }
-            }
-        </style>
     </head>
     <body>
         <div class="whatsapp-btn-container">
@@ -208,158 +256,36 @@
             <!-- Header mobile END -->
 
         </header>
-        <section class="s-gallery" id="s-gallery">
-            <div class="container">
-                <h2 class="center-title wow fadeIn" data-wow-delay="0.1s">Photo gallery</h2>
-
-                <div class="gallery-wrap">
-                    <a
-                        href="images/interior/1.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="0.2s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/1.jpg" alt="Image 1">
-                    </a>
-                    <a
-                        href="images/interior/2.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="0.3s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/2.jpg" alt="Image 2">
-                    </a>
-                    <a
-                        href="images/interior/3.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="0.4s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/3.jpg" alt="Image 3">
-                    </a>
-                    <a
-                        href="images/interior/4.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="0.5s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/4.jpg" alt="Image 4">
-                    </a>
-                    <a
-                        href="images/interior/5.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="0.6s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/5.jpg" alt="Image 5">
-                    </a>
-                    <a
-                        href="images/interior/6.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="0.7s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/6.jpg" alt="Image 6">
-                    </a>
-                    <a
-                        href="images/interior/7.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="0.8s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/7.jpg" alt="Image 7">
-                    </a>
-                    <a
-                        href="images/8.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="0.9s">
-                        <span class="gallery-border"></span>
-                        <img src="images/8.jpg" alt="Image 8">
-                    </a>
-                    <a
-                        href="images/interior/9.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/9.jpg" alt="Image 9">
-                    </a>
-                    <a
-                        href="images/interior/10.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.1s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/10.jpg" alt="Image 10">
-                    </a>
-                    <a
-                        href="images/interior/11.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.2s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/11.jpg" alt="Image 11">
-                    </a>
-                    <a
-                        href="images/interior/12.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.3s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/12.jpg" alt="Image 12">
-                    </a>
-                    <a
-                        href="images/interior/13.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.4s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/13.jpg" alt="Image 13">
-                    </a>
-                    <a
-                        href="images/interior/14.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.5s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/14.jpg" alt="Image 14">
-                    </a>
-                    <a
-                        href="images/interior/15.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.6s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/15.jpg" alt="Image 15">
-                    </a>
-                    <a
-                        href="images/interior/16.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.7s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/16.jpg" alt="Image 16">
-                    </a>
-                    <a
-                        href="images/interior/17.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.7s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/17.jpg" alt="Image 16">
-                    </a>
-                    <a
-                        href="images/interior/18.jpg"
-                        class="gallery-item wow fadeIn"
-                        data-effect="mfp-zoom-in"
-                        data-wow-delay="1.7s">
-                        <span class="gallery-border"></span>
-                        <img src="images/interior/18.jpg" alt="Image 16">
-                    </a>
-                </div>
+        <div class="main">
+            <div class="form-container" id="loanFormContainer">
+                <h1 class="form-title" id="formTitle">Purchase & Construction Loan Application Form</h1>
+                <form onsubmit="sendToWhatsApp()" action="https://api.web3forms.com/submit" method="POST" id="loanApplicationForm" class="loan-form">
+                    <!-- <label style="display: none;" for="Purchase and construction" class="form-label">Purchase & Construction Loan Application Form</label> -->
+                    <input style="display: none;" type="text" id="applicationType" name="applicationType" class="form-input" placeholder="Enter your full name" value="Purchase & Construction Loan Application">
+                    <input type="hidden" name="access_key" value="213ade23-1eb7-48a3-a313-5a316b226881">
+                    <label for="applicantName" class="form-label">Name:</label>
+                    <input type="text" id="applicantName" name="applicantName" class="form-input" placeholder="Enter your full name" required>
+        
+                    <label for="applicantMobile" class="form-label">Mobile Number:</label>
+                    <input type="tel" id="applicantMobile" name="applicantMobile" class="form-input" placeholder="Enter your mobile number" required>
+        
+                    <label for="loanAmount" class="form-label">Loan Amount:</label>
+                    <input type="number" id="loanAmount" name="loanAmount" class="form-input" placeholder="Enter the loan amount" required>
+        
+                    <label for="employmentType" class="form-label">Employment Type:</label>
+                    <select id="employmentType" name="employmentType" class="form-select" required>
+                        <option value="" disabled selected>Select your employment type</option>
+                        <option value="salary">Salary</option>
+                        <option value="self-employed">Self-Employed</option>
+                    </select>
+        
+                    <label for="applicantLocation" class="form-label">Location:</label>
+                    <input type="text" id="applicantLocation" name="applicantLocation" class="form-input" placeholder="Kodagi Thrumalapura, Hesaraghatta Main Road, Bengaluru - 560089" required>
+        
+                    <button type="submit" id="submitButton" class="submit-button">Submit</button>
+                </form>
             </div>
-        </section>
+        </div>
         <footer class="site-footer">
             <div class="container">
 
@@ -448,15 +374,24 @@
         <script src="js/wow.min.js"></script>
         <script src="js/script.js"></script>
         <script>
-            $(document).ready(function () {
-                new WOW().init();
-                $('.popup-link').magnificPopup({
-                    type: 'image',
-                    gallery: {
-                        enabled: true
-                    }
-                });
-            });
+            function sendToWhatsApp() {
+        // Get form values
+        const name = document.getElementById('applicantName').value;
+        const mobile = document.getElementById('applicantMobile').value;
+        const loanAmount = document.getElementById('loanAmount').value;
+        const employmentType = document.getElementById('employmentType').value;
+        const location = document.getElementById('applicantLocation').value;
+    
+        // Create a message string
+        const message = `*Purchase & Construction Loan Application*\n\nName: ${name}\nMobile: ${mobile}\nLoan Amount: ${loanAmount}\nEmployment Type: ${employmentType}\nLocation: ${location}`;
+    
+        // WhatsApp API URL with pre-filled message
+        const whatsappURL = `https://wa.me/917975804459?text=${encodeURIComponent(message)}`;
+    
+        // Open WhatsApp chat with pre-filled message
+        window.open(whatsappURL, '_blank');
+    }
+    
         </script>
     </body>
 </html>
