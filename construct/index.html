@@ -23,7 +23,6 @@
 	</div>
 
 	<div class="modal-form mfp-hide mfp-with-anim" id="modal-form">
-
 		<div class="modal-form-head">
 			<div class="modal-form-logo">
 				<img src="images/LOGO.png" alt="Construction">
@@ -32,16 +31,32 @@
 				<img src="images/close.svg" alt="Close">
 			</div>
 		</div>
-
+	
 		<div class="modal-form-body">
 			<div class="modal-form-title">Request a call</div>
 			<form id="request-call-form">
 				<input type="text" id="name1" name="name" placeholder="Your name*" required>
 				<input type="number" id="phone1" name="phone" placeholder="Your phone*" required>
+				
+				<label for="appointment-purpose">Purpose of Appointment</label>
+				<select id="appointment-purpose" name="purpose" required>
+					<option value="" disabled selected>Select a purpose*</option>
+					<option value="general">General enquiries</option>
+					<option value="construction">Construction</option>
+					<option value="plan">Plan appointment</option>
+					<option value="design">Design</option>
+					<option value="loan">Loan</option>
+					<option value="loan-construction">Loan & Construction</option>
+					<option value="other">Other</option>
+				</select>
+				
+				<div id="custom-reason" style="display: none;">
+					<input type="text" id="custom-reason-text" name="custom_reason" placeholder="Please specify">
+				</div>
+	
 				<button type="submit" class="form-button">Send</button>
 			</form>
 		</div>
-
 	</div>
 
 	<div class="go-up">
@@ -589,7 +604,11 @@
 	</section>
 
 
-	<!-- <div class="s-partners" id="s-partners">
+	<div class="s-partners" id="s-partners">
+		<center>
+			<h1 class="def-title" style="font-family: 'Montserrat';">Loan partners</h1>
+			<br>
+		</center>
 		<div class="partners-row">
 			<div class="partners-item"><img src="images/partner-1.svg" alt="partner"></div>
 			<div class="partners-item"><img src="images/partner-2.svg" alt="partner"></div>
@@ -602,7 +621,10 @@
 			<div class="partners-item"><img src="images/partner-4.svg" alt="partner"></div>
 			<div class="partners-item"><img src="images/partner-5.svg" alt="partner"></div>
 		</div>
-	</div> -->
+		<center>
+			<a href="loan.html" class="red-btn" >Apply for Loan</a>
+		</center>
+	</div>
 
 	<section class="s-form" id="s-contact">
 		<div class="container">
@@ -718,23 +740,33 @@
 	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 	<script>
-		function sendWhatsAppMessage() {
-			// event.preventDefault();
-	
-			var name = document.getElementById('name').value;
-			var phone = document.getElementById('phone').value;
-			var email = document.getElementById('email').value;
-			var message = document.getElementById('message').value;
+		function sendWhatsAppMessage(event) {
+			// Prevent default form submission
+			event.preventDefault();
+			
+			// Get form values
+			var name = document.getElementById('name1').value;
+			var phone = document.getElementById('phone1').value;
+			var purpose = document.getElementById('appointment-purpose').value;
+			var customReason = document.getElementById('custom-reason-text').value;
 			var whatsappNumber = '+917975804459'; // Replace with the actual WhatsApp number
 	
-			var whatsappUrl = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent('Name: ' + name + '\nPhone: ' + phone +  '\nEmail: ' + email + '\nMessage: ' + message);
+			// Construct the message
+			var message = 'Name: ' + name + '\nPhone: ' + phone + '\nPurpose of Appointment: ' + purpose;
+			if (purpose === 'other' && customReason.trim() !== '') {
+				message += '\nCustom Reason: ' + customReason;
+			}
 	
-			// window.open(whatsappUrl, '_blank');
+			var whatsappUrl = 'https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message);
+	
+			// Open WhatsApp
 			window.open(whatsappUrl).focus();
 		}
 	
-		document.getElementById('whatsappForm').addEventListener('submit', sendWhatsAppMessage);
+		// Attach event listener to the form
+		document.getElementById('request-call-form').addEventListener('submit', sendWhatsAppMessage);
 	</script>
+	
 	<script>
 		document.getElementById('request-call-form').addEventListener('submit', function(event) {
 			event.preventDefault(); // Prevent the default form submission
@@ -754,6 +786,18 @@
 			// Redirect to the WhatsApp URL
 			window.open(whatsappUrl, '_blank');
 		});
+		</script>
+		<script>
+			document.getElementById('appointment-purpose').addEventListener('change', function() {
+				var customReasonDiv = document.getElementById('custom-reason');
+				var selectedValue = this.value;
+				
+				if (selectedValue === 'other') {
+					customReasonDiv.style.display = 'block';
+				} else {
+					customReasonDiv.style.display = 'none';
+				}
+			});
 		</script>
 </body>
 
