@@ -14,6 +14,204 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<title>Mathrushree</title>
+	<style>
+		.con {
+    font-family: Arial, sans-serif;
+    background-color: #eef4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+}
+
+.construction-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.construction-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.construction-icon img {
+    width: 90px;
+    height: 90px;
+}
+@media (max-width: 768px) {
+	.construction-icon img {
+    width: 60px;
+    height: 60px;
+}
+.con {
+	height: 50vh;
+}
+}
+.construction-text h2 {
+    font-size: 24px;
+    color: #4a4a4a;
+    margin: 10px 0 5px;
+}
+
+.construction-text p {
+    font-size: 16px;
+    color: #9a9a9a;
+    margin: 0;
+}
+
+.construction-cta {
+    text-align: center;
+}
+
+.construction-button {
+    background-color: #eb595f;
+    color: #fff;
+    padding: 20px 20px;
+    border: none;
+    /* border-radius: 5px; */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.construction-button:hover {
+    background-color: #BB2440;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .construction-container {
+        width: 80%;
+    }
+
+    .construction-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .construction-container {
+        width: 90%;
+    }
+
+    .construction-text h2 {
+        font-size: 20px;
+    }
+
+    .construction-text p {
+        font-size: 14px;
+    }
+
+    .construction-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #eef4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.cost-estimation-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 90%;
+    text-align: center;
+}
+
+.cost-estimation-title {
+    font-size: 20px;
+    color: #262626;
+    margin-bottom: 20px;
+}
+
+.location-select select {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pricing-table {
+    margin: 20px 0;
+}
+
+.pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eb595f;
+}
+
+.pricing-row:last-child {
+    border-bottom: none;
+}
+
+.plan-name {
+    font-size: 16px;
+    color: #262626;
+}
+
+.plan-price {
+    font-size: 16px;
+    color: #262626;
+}
+
+.cta {
+    margin-top: 20px;
+}
+
+.cta-button {
+    background-color: #eb595f;
+    color: #fff;
+    padding: 20px 20px;
+    border: none;
+    /* border-radius: 5px; */
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #d02b0e;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .cost-estimation-title {
+        font-size: 18px;
+    }
+
+    .plan-name, .plan-price {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+	</style>
 </head>
 
 <body>
@@ -241,8 +439,38 @@
 
 		</div>
 	</section>
-
-
+<section class="body">
+	<div class="cost-estimation-container">
+        <h1 class="cost-estimation-title">Cost Estimation Of Constructing A House In</h1>
+        <div class="location-select">
+            <select>
+                <option value="bengaluru">Bengaluru</option>
+                <!-- Add more options here if needed -->
+            </select>
+        </div>
+        <div class="pricing-table">
+            <div class="pricing-row">
+                <span class="plan-name">Basic</span>
+                <span class="plan-price">• ₹ 1810 /sqft (Incl. GST)</span>
+            </div>
+            <div class="pricing-row">
+                <span class="plan-name">Classic</span>
+                <span class="plan-price">• ₹ 1940 /sqft (Incl. GST)</span>
+            </div>
+            <div class="pricing-row">
+                <span class="plan-name">Premium</span>
+                <span class="plan-price">• ₹ 2250 /sqft (Incl. GST)</span>
+            </div>
+            <div class="pricing-row">
+                <span class="plan-name">Royale</span>
+                <span class="plan-price">• ₹ 2480 /sqft (Incl. GST)</span>
+            </div>
+        </div>
+        <div class="cta">
+            <button class="cta-button">Start Your Construction</button>
+        </div>
+    </div>
+</section>
 	<section class="s-numbers">
 		<div class="container">
 			<div class="numbers-row num-scroll">
@@ -333,6 +561,32 @@
 				</div>
 
 			</div>
+		</div>
+	</section>
+
+	<section class="con">
+		<div class="construction-container">
+			<div class="construction-box">
+				<div class="construction-icon">
+					<img src="images/clock-icon.png" alt="Clock Icon">
+				</div>
+				<div class="construction-text">
+					<h2>Guaranteed</h2>
+					<p>On Time Delivery</p>
+				</div>
+			</div>
+			<div class="construction-box">
+				<div class="construction-icon">
+					<img src="images/money-icon.png" alt="Money Icon">
+				</div>
+				<div class="construction-text">
+					<h2>Zero</h2>
+					<p>Cost Overruns</p>
+				</div>
+			</div>
+		</div>
+		<div class="construction-cta">
+			<button class="construction-button">Start Your Construction</button>
 		</div>
 	</section>
 
